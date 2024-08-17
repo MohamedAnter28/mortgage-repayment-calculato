@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Mortgage Repayment Calculator</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="col-1">
+      <div class="heading">
+        <h1>Mortgage Calculator</h1>
+        <span id="clearAll">Clear All</span>
+      </div>
+      <form action="#" class="form" id="form">
+        <div class="f-1">
+          <label for="amountInput">Mortgage Amount</label>
+          <div class="input">
+            <span class="sign">£</span>
+            <input type="number" name="amountInput" id="amountInput">
+          </div>
+          <div class="alert">This filed is required</div>
+        </div>
+        <div class="f-2">
+          <div>
+            <label for="termInput">Mortgage Term</label>
+            <div class="input">
+              <input type="number" name="termInput" id="termInput">
+              <span class="sign">years</span>
+            </div>
+            <div class="alert">This filed is required</div>
+          </div>
+          <div>
+            <label for="rateInput">Interest Rate</label>
+            <div class="input">
+              <input type="number" name="rateInput" id="rateInput" step="0.01">
+              <span class="sign">%</span>
+            </div>
+            <div class="alert">This filed is required</div>
+          </div>
+        </div>
+        <div class="f-3">
+          <label>Mortgage Type</label>
+          <div class="radioinput">
+            <input type="radio" name="radioInput" id="repaymentInput" value="repayment">
+            <label for="repaymentInput">Repayment</label>
+          </div>
+          <div class="radioinput">
+            <input type="radio" name="radioInput" id="interestInput" value="interestOnly" >
+            <label for="interestInput">Interest Only</label>
+          </div>
+        </div>
+        <button type="submit" class="btn"><img src="./assets/images/icon-calculator.svg" alt="calculator"> Calculate
+          Repayments</button>
+      </form>
+    </div>
+    <div class="col-2 nocalc">
+      <div class="no-calc">
+        <img src="./assets/images/illustration-empty.svg" alt="illustration-empty">
+        <h2>Results shown here</h2>
+        <p>Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.</p>
+      </div>
+      <div class="result">
+        <h3>Your Result</h3>
+        <p>Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        <div class="calc">
+          <span>Your monthly repayments</span>
+          <div class="month-repayments" id="month-repayments">£1797,151</div>
+          <hr>
+          <span>Total you'll repay over the term</span>
+          <div class="Total" id="Total">£1797,151</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
